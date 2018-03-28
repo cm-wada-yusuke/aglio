@@ -12,11 +12,11 @@
     "pretest": "npm run build",
     "test": "mocha --compilers coffee:coffee-script/register",
     "prepublish": "npm run build",
-    "postinstall": "node scripts/setup-cache.js"
+    "postinstall": "bash ./scripts/setup-cache.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielgtaylor/aglio"
+    "url": "https://github.com/cm-wada-yusuke/aglio.git"
   },
   "keywords": [
     "api",
