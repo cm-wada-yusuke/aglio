@@ -127,7 +127,7 @@ function refresh(body) {
 
     // Re-initialize the page
     init();
-    autoCollapse();
+    //autoCollapse();
 
     document.querySelector('body').className = '';
 }
@@ -184,10 +184,8 @@ function init() {
     for (i = 0; i < buttons.length; i++) {
         buttons[i].onclick = toggleCollapseButton;
 
-        // Show by default? Then toggle now.
-        if (buttons[i].className.indexOf('show') !== -1) {
-            toggleCollapseButton({target: buttons[i].children[0]});
-        }
+        // Show all by default
+        toggleCollapseButton({target: buttons[i].children[0]});
     }
 
     var responseCodes = document.querySelectorAll('.example-names');
@@ -196,10 +194,8 @@ function init() {
         for (j = 0; j < tabButtons.length; j++) {
             tabButtons[j].onclick = toggleTabButton;
 
-            // Show by default?
-            if (j === 0) {
-                toggleTabButton({target: tabButtons[j]});
-            }
+            // Show all by default
+            toggleTabButton({target: tabButtons[j]});
         }
     }
 
@@ -217,7 +213,7 @@ function init() {
 init();
 
 window.onload = function () {
-    autoCollapse();
+    // autoCollapse();
     // Remove the `preload` class to enable animations
     document.querySelector('body').className = '';
 };
